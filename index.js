@@ -18,10 +18,25 @@ restService.use(
 restService.post("/audio", function(req, res) {
 //  console.log(JSON.parse(req.body.customer));
   var type = req.body.type;
-  //req.body.result
+  var result = req.body.id;
+  switch (type){
+      case "charge.success":
+		 
+            result = "pagado";
+            break;
+        case "charge.pending":
+		result = "pendiente";
+            break;
+        case "charge.expired":
+		
+            result = "expirado";
+            break;
+      default:
+      result = "en espera";
+  }
   
   return res.json({
-   "status": type,  
+   "status": result,  
   "short_id": "ok",
   "message": "ok",
   "reference": "mi-id-123"
