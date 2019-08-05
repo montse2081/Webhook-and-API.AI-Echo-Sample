@@ -18,7 +18,7 @@ restService.use(
 restService.post("/audio", function(req, res) {
 //  console.log(JSON.parse(req.body.customer));
   var type = req.body.type;
-  var result = "PROCESANDO";
+  var result = "success";
   switch (type){
       case "charge.success": 
             result = "pagado";
@@ -32,9 +32,9 @@ restService.post("/audio", function(req, res) {
   }
   
   return res.json({
-   "status": result,  
+   "status": "success",  
   "short_id": "ok",
-  "message": "ok",
+  "message": result,
   "reference": "mi-id-123"
   });
 });
