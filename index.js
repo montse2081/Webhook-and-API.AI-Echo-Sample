@@ -17,7 +17,7 @@ restService.use(
 
 restService.post("/audio", function(req, res) {
 //  console.log(JSON.parse(req.body.customer));
-  var type = req.body.type;
+  var type = JSON.parse(req.body.type);
   var result = "success";
   switch (type){
       case "charge.success": 
