@@ -31,8 +31,7 @@ restService.post("/audio", function(req, res) {
 		
             result = "expirado";
             break;
-      default:
-      result = "en espera";
+     
   }
   
   return res.json({
