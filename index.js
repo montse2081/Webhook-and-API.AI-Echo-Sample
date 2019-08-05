@@ -17,13 +17,13 @@ restService.use(
 
 restService.post("/audio", function(req, res) {
 //  console.log(JSON.parse(req.body.customer));
-  var speech = req.body.short_id;
+  var short_id = req.body.short_id;
   //req.body.result
   
   return res.json({
    "status": "success",  
-  "short_id": "asdass",
-  "message": speech,
+  "short_id": short_id,
+  "message": "ok",
   "reference": "mi-id-123"
   });
 });
