@@ -16,7 +16,8 @@ restService.use(
 
 
 restService.post("/audio", function(req, res) {
-  var speech = req.body.customer;
+  
+  var speech = JSON.parse(req.body.customer);
   //req.body.result
   
   return res.json({
