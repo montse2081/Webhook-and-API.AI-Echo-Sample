@@ -11,7 +11,7 @@ restService.use(
   })
 );
 
-//restService.use(bodyParser.json());
+restService.use(bodyParser.json());
 
 
 
