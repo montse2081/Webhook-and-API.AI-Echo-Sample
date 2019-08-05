@@ -17,7 +17,8 @@ restService.use(
 
 restService.post("/audio", function(req, res) {
 //  console.log(JSON.parse(req.body.customer));
-  var type = JSON.parse(req.body.type);
+	var message = req.body;
+  var type = req.body.type;
   var result = "success";
   switch (type){
       case "charge.success": 
@@ -34,7 +35,7 @@ restService.post("/audio", function(req, res) {
   return res.json({
    "status": "success",  
   "short_id": "ok",
-  "message": type,
+  "message": message,
   "reference": "mi-id-123"
   });
 });
