@@ -34,7 +34,7 @@ restService.post("/audio", function(req, res) {
   return res.json({
    "status": "success",  
   "short_id": "ok",
-  "message": result,
+  "message": type,
   "reference": "mi-id-123"
   });
 });
